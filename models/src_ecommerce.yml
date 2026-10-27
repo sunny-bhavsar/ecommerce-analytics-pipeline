@@ -1,0 +1,25 @@
+version: 2
+
+sources:
+  - name: RAW_ZONE
+    database: ECOMMERCE_DB
+    schema: RAW_ZONE
+    tables:
+      - name: RAW_CUSTOMERS
+        columns:
+          - name: customer_id
+            tests:
+              - unique
+              - not_null
+      - name: RAW_PRODUCTS
+        columns:
+          - name: product_id
+            tests:
+              - unique
+              - not_null
+      - name: RAW_ORDERS
+        columns:
+          - name: order_id
+            tests:
+              - unique
+              - not_null
